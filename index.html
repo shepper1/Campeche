@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeche : Échos Mayas et Charme Colonial </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        template: {
+                            sable: '#F3E5AB',
+                            ocre: '#C66B3D',
+                            roche: '#2D2A26',
+                            ciel: '#4A6C6F',
+                            bg: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #C66B3D;
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">Campeche : Échos Mayas et Charme Colonial</a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée et Premiers Pas dans la Ville Fortifiée</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Exploration du Cœur Historique et ses Fortifications</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Immersion dans la Civilisation Maya à Edzná</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Culture Maya et Détente Côtière</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Aventure dans les Mangroves de la Laguna de Términos</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Saveurs Locales et Immersion Culinaire</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Découverte des Haciendas et de la Vie Côtière Authentique</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Journée Libre, Shopping et Douceurs de Campeche</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Départ de Campeche</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-12 md:pt-0">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        
+        <video autoplay muted loop playsinline 
+               poster="https://images.unsplash.com/photo-1579606946838-6db34433f3c0?q=80&w=2070"
+               class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://videos.pexels.com/video-files/4456988/4456988-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.3em] mb-4 uppercase text-sm font-semibold">Feuille de Route</p>
+            <h1 class="font-Playfair italic text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">Campeche</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-light max-w-2xl mx-auto leading-relaxed">Campeche : Échos Mayas et Charme Colonial</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🗓️ 11 jours</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">💰 2500€</span>
+                <span class="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-sm">🛬 Environ 15-18h (escales incluses) depuis Paris</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-20 relative">
+        <div class="text-center mb-16">
+            <span class="text-template-ocre font-bold tracking-widest text-xs uppercase">Le Roadtrip</span>
+            <h2 class="font-serif text-4xl mt-2 text-template-roche">Votre Programme</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée et Premiers Pas dans la Ville Fortifiée</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, l'arrivée à Campeche offre un premier aperçu de son charme unique. Le temps est dédié à l'installation et à une douce immersion dans l'atmosphère sereine de cette ville classée au patrimoine mondial de l'UNESCO.
+La soirée invite à une première balade le long des remparts, où l'histoire coloniale se révèle sous un ciel étoilé.
+C'est l'occasion parfaite de se familiariser avec les rues colorées et l'ambiance paisible avant d'entamer l'exploration plus approfondie.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛬 <strong>Arrivée à Campeche et installation</strong>: Atterrissage à l'aéroport international de Campeche (CPE), transfert vers votre hôtel dans le centre historique et installation pour vous reposer après le vol.</li>
+                            
+                                <li>🚶‍♂️ <strong>Balade nocturne le long des remparts</strong>: Profitez de la fraîcheur du soir pour une promenade relaxante autour des murailles de la ville, admirant les portes illuminées et les bastions qui racontent des siècles d'histoire.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil d'arrivée</p>
+                                <p class="text-gray-700">Les taxis à l'aéroport sont sûrs et les tarifs vers le centre sont fixes. N'hésitez pas à demander le prix avant de monter.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Pour une première soirée</p>
+                                <p class="text-gray-700">Le centre historique est très sûr. Flâner sans but précis est la meilleure façon de s'imprégner de l'ambiance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration du Cœur Historique et ses Fortifications</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à la découverte approfondie du centre historique de Campeche, véritable joyau colonial.
+Les couleurs vives des façades, les rues pavées et les balcons fleuris créent un décor enchanteur.
+L'exploration des fortifications, témoignages d'une époque de piraterie, offre des vues imprenables sur la ville et la mer.
+La journée se termine par une promenade relaxante le long du Malecon, au rythme des vagues du Golfe du Mexique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚶‍♀️ <strong>Découverte du centre historique</strong>: Perdez-vous dans les rues colorées, admirez l'architecture coloniale et visitez la Cathédrale de Campeche, un édifice majestueux au cœur de la ville.</li>
+                            
+                                <li>🛡️ <strong>Visite des Baluartes et de la Puerta de Tierra</strong>: Explorez les bastions comme le Baluarte de San Juan ou de la Soledad, qui abritent souvent des musées, et traversez la grandiose Puerta de Tierra pour une plongée dans l'histoire défensive de la ville.</li>
+                            
+                                <li>🌅 <strong>Promenade sur le Malecon au coucher du soleil</strong>: Longez la promenade en bord de mer, le Malecon, pour profiter de la brise marine et admirer un magnifique coucher de soleil sur le Golfe du Mexique, un moment de pure sérénité.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Orientation</p>
+                                <p class="text-gray-700">Le centre historique est compact et se parcourt facilement à pied. Une carte détaillée vous aidera à ne rien manquer.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Spot photo</p>
+                                <p class="text-gray-700">Les toits des baluartes offrent des panoramas superbes pour des photos mémorables de la ville et de ses remparts.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Pause gourmande</p>
+                                <p class="text-gray-700">De nombreux restaurants se trouvent dans le centre historique, proposant des spécialités locales comme le 'pan de cazón'.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion dans la Civilisation Maya à Edzná</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'aventure nous mène hors des murs de la ville pour explorer l'un des sites archéologiques mayas les plus impressionnants de la région : Edzná.
+Ce lieu fascinant, moins fréquenté que d'autres, offre une atmosphère paisible et permet une véritable connexion avec l'ancienne civilisation maya.
+Ses structures imposantes, notamment le Grand Acropole et son temple à cinq étages, témoignent de l'ingéniosité architecturale et astronomique des Mayas.
+La journée est une plongée enrichissante dans l'histoire et la culture précolombienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚐 <strong>Excursion aux ruines d'Edzná</strong>: Prenez un collectivo ou un taxi pour une excursion d'une demi-journée à Edzná, un site maya remarquable connu pour son système hydraulique avancé et son imposant Temple des Cinq Étages.</li>
+                            
+                                <li>🏛️ <strong>Exploration du Grand Acropole et du Temple des Cinq Étages</strong>: Montez les marches du temple pour une vue panoramique sur l'ensemble du site et imaginez la vie des anciens habitants de cette cité.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le site est en plein air, prévoyez chapeau, crème solaire et beaucoup d'eau pour vous protéger du soleil.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures</p>
+                                <p class="text-gray-700">Portez des chaussures confortables pour la marche et l'exploration des pyramides.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture Maya et Détente Côtière</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La matinée est dédiée à l'approfondissement de la culture maya à travers une visite muséale, offrant un complément précieux à l'exploration des ruines.
+L'après-midi, place à la détente sur une plage locale, permettant de se rafraîchir et de profiter du soleil du Golfe du Mexique.
+C'est un équilibre parfait entre l'enrichissement culturel et la relaxation, offrant un aperçu des différentes facettes de la vie à Campeche.
+La journée se termine en douceur, avec le souvenir des trésors anciens et la quiétude du bord de mer.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🗿 <strong>Visite du Musée de la Culture Maya (Fuerte de San Miguel)</strong>: Montez au Fuerte de San Miguel pour visiter son musée qui abrite des artefacts mayas impressionnants, dont des masques de jade de Calakmul, tout en profitant d'une vue spectaculaire sur la mer.</li>
+                            
+                                <li>🌊 <strong>Détente à Playa Bonita</strong>: L'après-midi, dirigez-vous vers Playa Bonita, une plage aménagée à quelques kilomètres au sud de la ville, idéale pour se baigner et se détendre au soleil.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚌 Accès à la plage</p>
+                                <p class="text-gray-700">Des collectivos ou taxis peuvent vous emmener à Playa Bonita depuis le centre-ville en environ 15-20 minutes.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏊 Commodités</p>
+                                <p class="text-gray-700">Playa Bonita dispose de douches, de vestiaires et de petits restaurants pour déjeuner sur place.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure dans les Mangroves de la Laguna de Términos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est une invitation à l'évasion au cœur de la nature luxuriante de Campeche.
+La Laguna de Términos, une immense lagune côtière, est un écosystème d'une richesse incroyable, abritant une faune et une flore exceptionnelles.
+Une excursion en bateau à travers les mangroves permet d'observer des oiseaux exotiques, des dauphins et peut-être même des crocodiles, dans leur habitat naturel.
+C'est une expérience immersive et apaisante, loin de l'agitation, qui révèle la beauté sauvage de la région.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🚤 <strong>Tour en bateau dans la Laguna de Términos</strong>: Partez pour une excursion matinale en bateau depuis un port proche (comme Isla Aguada) pour explorer les mangroves de la Laguna de Términos, une zone protégée riche en biodiversité. Observez des oiseaux aquatiques, des dauphins et la végétation dense.</li>
+                            
+                                <li>🦅 <strong>Observation de la faune et de la flore</strong>: Votre guide vous aidera à repérer les espèces locales, notamment des flamants roses, des pélicans et diverses espèces de poissons, dans cet écosystème unique.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Organisation</p>
+                                <p class="text-gray-700">Réservez votre tour en bateau à l'avance, soit via votre hôtel, soit directement auprès d'un opérateur local.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Protection</p>
+                                <p class="text-gray-700">Prévoyez un répulsif anti-moustiques, surtout en saison des pluies, et des jumelles pour l'observation des oiseaux.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Transport</p>
+                                <p class="text-gray-700">Isla Aguada est à environ 1h30 de route de Campeche. Un taxi ou un bus peut vous y emmener.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Saveurs Locales et Immersion Culinaire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La gastronomie de Campeche est un pilier de son identité, mélangeant influences mayas et espagnoles.
+Cette journée est une exploration des saveurs, des arômes et des traditions culinaires de la région.
+La visite d'un marché local est une explosion de couleurs et d'odeurs, offrant un aperçu authentique de la vie quotidienne.
+Participer à un cours de cuisine ou simplement déguster des plats typiques permet de comprendre l'âme de Campeche à travers son assiette.
+C'est une journée riche en découvertes gustatives et en échanges culturels.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🛍️ <strong>Visite du Mercado Principal de Campeche</strong>: Plongez dans l'effervescence du marché central, où vous trouverez des fruits exotiques, des épices, des fruits de mer frais et des produits artisanaux. C'est une excellente occasion de goûter des spécialités locales.</li>
+                            
+                                <li>👨‍🍳 <strong>Cours de cuisine Yucatèque ou dégustation</strong>: Participez à un cours de cuisine pour apprendre à préparer des plats emblématiques comme le cochinita pibil ou les panuchos, ou optez pour une dégustation guidée des meilleures saveurs de la ville dans des restaurants authentiques.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Marchandage</p>
+                                <p class="text-gray-700">Au marché, le marchandage est moins courant qu'ailleurs au Mexique, mais les prix sont généralement très abordables.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Attention aux épices</p>
+                                <p class="text-gray-700">La cuisine mexicaine peut être relevée. N'hésitez pas à demander 'sin chile' si vous n'aimez pas les plats trop épicés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte des Haciendas et de la Vie Côtière Authentique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée offre un contraste saisissant entre le passé opulent des haciendas et la simplicité de la vie des pêcheurs.
+La visite d'une hacienda permet de remonter le temps, d'imaginer l'époque du henequén et de l'indigo, et d'admirer l'architecture coloniale restaurée.
+Ensuite, un détour par un petit village de pêcheurs offre une immersion dans le quotidien de la côte, loin des circuits touristiques classiques.
+C'est une occasion unique de rencontrer les habitants et de savourer des fruits de mer ultra-frais, directement pêchés du jour.
+Une journée entre histoire, tradition et authenticité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🏡 <strong>Visite d'une Hacienda historique</strong>: Explorez une des haciendas restaurées des environs de Campeche, comme l'Hacienda Uayamon (si l'accès est possible ou juste pour admirer l'extérieur), pour découvrir l'histoire de ces anciennes plantations et leur architecture majestueuse.</li>
+                            
+                                <li>🎣 <strong>Immersion dans un village de pêcheurs</strong>: Rendez-vous dans un petit village côtier comme Lerma, tout près de Campeche, pour observer les pêcheurs décharger leurs prises, flâner sur le port et déguster des fruits de mer frais dans un restaurant local typique.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Transport</p>
+                                <p class="text-gray-700">La location de voiture est recommandée pour cette journée afin d'explorer à votre rythme, ou vous pouvez organiser un taxi pour la journée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦐 Spécialité</p>
+                                <p class="text-gray-700">À Lerma, ne manquez pas de goûter les 'camarones al coco' (crevettes à la noix de coco), une spécialité locale.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Libre, Shopping et Douceurs de Campeche</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La dernière journée complète à Campeche est placée sous le signe de la liberté et de la détente.
+C'est le moment idéal pour revisiter un lieu coup de cœur, faire quelques emplettes de souvenirs artisanaux ou simplement se laisser porter par l'ambiance de la ville.
+Profitez-en pour savourer une dernière fois la cuisine locale, vous prélasser dans un café ou vous offrir un moment de repos bien mérité.
+Cette journée permet de clore le voyage en douceur, en emportant avec soi les couleurs et les saveurs de Campeche.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🎁 <strong>Shopping de souvenirs et artisanat local</strong>: Flânez dans les boutiques du centre historique pour trouver des guayaberas (chemises traditionnelles), des bijoux en corail noir, des hamacs ou des objets en bois sculpté, parfaits souvenirs de votre voyage.</li>
+                            
+                                <li>☕ <strong>Détente dans un café ou revisite d'un lieu favori</strong>: Profitez d'un café en terrasse pour observer la vie locale, ou retournez visiter un musée ou un baluarte qui vous a particulièrement plu, à votre rythme.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Idée cadeau</p>
+                                <p class="text-gray-700">Le 'sombrero de jipijapa', un chapeau de paille fine, est un artisanat emblématique de la région de Campeche.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍦 Gourmandise</p>
+                                <p class="text-gray-700">Goûtez aux glaces artisanales locales, souvent à base de fruits exotiques, pour une pause rafraîchissante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Campeche</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le jour du départ, mais avant de quitter Campeche, prenez le temps d'un dernier petit-déjeuner typique.
+Profitez des dernières heures pour une ultime balade dans le centre historique, imprégnant une dernière fois l'atmosphère unique de la ville.
+Les souvenirs des couleurs vives, des saveurs intenses et de l'histoire maya et coloniale resteront gravés.
+Le transfert vers l'aéroport marque la fin d'une aventure mémorable dans cette perle du Golfe du Mexique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left">
+                            
+                                <li>🍳 <strong>Dernier petit-déjeuner local</strong>: Savourez un dernier 'huevos motuleños' ou 'chilaquiles' dans un restaurant local avant de partir.</li>
+                            
+                                <li>✈️ <strong>Transfert vers l'aéroport de Campeche (CPE)</strong>: Organisez votre transfert en fonction de l'heure de votre vol pour entamer le voyage de retour.</li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Campeche/main/campeche_jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Prévoyez d'arriver à l'aéroport au moins 2 heures avant votre vol domestique.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👋 Hasta luego!</p>
+                                <p class="text-gray-700">Campeche vous attendra pour une prochaine aventure !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <footer id="pratique" class="bg-white border-t border-gray-200 pt-16 pb-10 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget vol: </strong>1000€/pers (vol A/R Paris-Campeche avec escale)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget transports: </strong>150€/pers (taxis, collectivos, excursions locales et inter-villes)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget repas: </strong>450€/pers (environ 50€/jour pour 9 jours, restaurants locaux et marchés)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget logement: </strong>765€/pers (environ 85€/nuit pour 9 nuits, hôtel boutique ou charmant)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed"><strong>Budget activités: </strong>100€/pers (entrées sites archéologiques, musées, tour en bateau)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed">Les périodes idéales pour ce séjour sont les mois de novembre à mai, durant la saison sèche.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2">
+                    <span>🧳</span> À savoir
+                </h4>
+                <ul class="text-sm text-gray-600 space-y-3">
+
+                        <li><strong>💳 :</strong> La monnaie locale est le Peso Mexicain (MXN). Les cartes de crédit sont acceptées dans la plupart des commerces, mais prévoyez du liquide pour les petits achats et marchés.</li>
+                    
+                        <li><strong>🗣️ :</strong> La langue officielle est l'espagnol. Apprendre quelques mots de base sera très apprécié par les habitants.</li>
+                    
+                        <li><strong>🔌 :</strong> Les prises électriques sont de type A et B (deux ou trois fiches plates). Un adaptateur est nécessaire pour les appareils européens.</li>
+                    
+                        <li><strong>💧 :</strong> Il est fortement recommandé de ne pas boire l'eau du robinet. Privilégiez l'eau en bouteille pour boire et vous brosser les dents.</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2"><span>🔗</span> Liens Utiles</h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://shepper1.github.io/Campeche/map.html" target="_blank" class="hover:underline flex items-center gap-2"><strong>🗺️ Carte</strong></a></li>
+                    
+                        <li><a href="https://visitcampeche.mx/" target="_blank" class="hover:underline flex items-center gap-2"><strong>📘 Visit Campeche</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/mx/campeche/241851/weather-forecast/241851" target="_blank" class="hover:underline flex items-center gap-2"><strong>🌤️ Meteo Campeche</strong></a></li>
+                    
+                        <li><a href="https://whc.unesco.org/fr/list/868" target="_blank" class="hover:underline flex items-center gap-2"><strong>🏛️ UNESCO Campeche</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-100 pt-8">
+            <p class="font-serif text-2xl text-template-roche mb-2">Campeche</p>
+            <p class="text-xs text-gray-400">© 2025 - Roadmap</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Gestion de l'affichage du menu au scroll
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // 2. Détection de l'étape active
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+
+                    document.querySelectorAll('.nav-item-desktop').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (activeId.includes('jour') && linkHref === 'jour-1') {
+                            link.classList.add('text-template-ocre');
+                        } else if (activeId === 'pratique' && linkHref === 'pratique') {
+                            link.classList.add('text-template-ocre');
+                        } else {
+                            link.classList.remove('text-template-ocre');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('div[id^="jour-"], footer#pratique').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
