@@ -1,0 +1,309 @@
+{
+  "pays": "Mexique",
+  "drapeau": "🇲🇽",
+  "symbole": "☀️",
+  "titre": "Campeche : Échos Mayas et Charme Colonial",
+  "budget_total": "2500€",
+  "duree": "11 jours",
+  "temps_vol": "Environ 15-18h (escales incluses)",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et Premiers Pas dans la Ville Fortifiée",
+      "legende": "Après un long voyage, l'arrivée à Campeche offre un premier aperçu de son charme unique. Le temps est dédié à l'installation et à une douce immersion dans l'atmosphère sereine de cette ville classée au patrimoine mondial de l'UNESCO.\nLa soirée invite à une première balade le long des remparts, où l'histoire coloniale se révèle sous un ciel étoilé.\nC'est l'occasion parfaite de se familiariser avec les rues colorées et l'ambiance paisible avant d'entamer l'exploration plus approfondie.",
+      "lieu": "Campeche",
+      "activites": [
+        "🛬 <strong>Arrivée à Campeche et installation</strong>: Atterrissage à l'aéroport international de Campeche (CPE), transfert vers votre hôtel dans le centre historique et installation pour vous reposer après le vol.",
+        "🚶‍♂️ <strong>Balade nocturne le long des remparts</strong>: Profitez de la fraîcheur du soir pour une promenade relaxante autour des murailles de la ville, admirant les portes illuminées et les bastions qui racontent des siècles d'histoire."
+      ],
+      "illustration": "campeche_jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil d'arrivée",
+          "texte": "Les taxis à l'aéroport sont sûrs et les tarifs vers le centre sont fixes. N'hésitez pas à demander le prix avant de monter."
+        },
+        {
+          "symbole": "💡",
+          "titre": "Pour une première soirée",
+          "texte": "Le centre historique est très sûr. Flâner sans but précis est la meilleure façon de s'imprégner de l'ambiance."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏰",
+      "titre": "Exploration du Cœur Historique et ses Fortifications",
+      "legende": "Cette journée est dédiée à la découverte approfondie du centre historique de Campeche, véritable joyau colonial.\nLes couleurs vives des façades, les rues pavées et les balcons fleuris créent un décor enchanteur.\nL'exploration des fortifications, témoignages d'une époque de piraterie, offre des vues imprenables sur la ville et la mer.\nLa journée se termine par une promenade relaxante le long du Malecon, au rythme des vagues du Golfe du Mexique.",
+      "lieu": "Campeche",
+      "activites": [
+        "🚶‍♀️ <strong>Découverte du centre historique</strong>: Perdez-vous dans les rues colorées, admirez l'architecture coloniale et visitez la Cathédrale de Campeche, un édifice majestueux au cœur de la ville.",
+        "🛡️ <strong>Visite des Baluartes et de la Puerta de Tierra</strong>: Explorez les bastions comme le Baluarte de San Juan ou de la Soledad, qui abritent souvent des musées, et traversez la grandiose Puerta de Tierra pour une plongée dans l'histoire défensive de la ville.",
+        "🌅 <strong>Promenade sur le Malecon au coucher du soleil</strong>: Longez la promenade en bord de mer, le Malecon, pour profiter de la brise marine et admirer un magnifique coucher de soleil sur le Golfe du Mexique, un moment de pure sérénité."
+      ],
+      "illustration": "campeche_jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Orientation",
+          "texte": "Le centre historique est compact et se parcourt facilement à pied. Une carte détaillée vous aidera à ne rien manquer."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Spot photo",
+          "texte": "Les toits des baluartes offrent des panoramas superbes pour des photos mémorables de la ville et de ses remparts."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Pause gourmande",
+          "texte": "De nombreux restaurants se trouvent dans le centre historique, proposant des spécialités locales comme le 'pan de cazón'."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🗿",
+      "titre": "Immersion dans la Civilisation Maya à Edzná",
+      "legende": "Aujourd'hui, l'aventure nous mène hors des murs de la ville pour explorer l'un des sites archéologiques mayas les plus impressionnants de la région : Edzná.\nCe lieu fascinant, moins fréquenté que d'autres, offre une atmosphère paisible et permet une véritable connexion avec l'ancienne civilisation maya.\nSes structures imposantes, notamment le Grand Acropole et son temple à cinq étages, témoignent de l'ingéniosité architecturale et astronomique des Mayas.\nLa journée est une plongée enrichissante dans l'histoire et la culture précolombienne.",
+      "lieu": "Edzná",
+      "activites": [
+        "🚐 <strong>Excursion aux ruines d'Edzná</strong>: Prenez un collectivo ou un taxi pour une excursion d'une demi-journée à Edzná, un site maya remarquable connu pour son système hydraulique avancé et son imposant Temple des Cinq Étages.",
+        "🏛️ <strong>Exploration du Grand Acropole et du Temple des Cinq Étages</strong>: Montez les marches du temple pour une vue panoramique sur l'ensemble du site et imaginez la vie des anciens habitants de cette cité."
+      ],
+      "illustration": "campeche_jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le site est en plein air, prévoyez chapeau, crème solaire et beaucoup d'eau pour vous protéger du soleil."
+        },
+        {
+          "symbole": "👟",
+          "titre": "Chaussures",
+          "texte": "Portez des chaussures confortables pour la marche et l'exploration des pyramides."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏖️",
+      "titre": "Culture Maya et Détente Côtière",
+      "legende": "La matinée est dédiée à l'approfondissement de la culture maya à travers une visite muséale, offrant un complément précieux à l'exploration des ruines.\nL'après-midi, place à la détente sur une plage locale, permettant de se rafraîchir et de profiter du soleil du Golfe du Mexique.\nC'est un équilibre parfait entre l'enrichissement culturel et la relaxation, offrant un aperçu des différentes facettes de la vie à Campeche.\nLa journée se termine en douceur, avec le souvenir des trésors anciens et la quiétude du bord de mer.",
+      "lieu": "Campeche / Playa Bonita",
+      "activites": [
+        "🗿 <strong>Visite du Musée de la Culture Maya (Fuerte de San Miguel)</strong>: Montez au Fuerte de San Miguel pour visiter son musée qui abrite des artefacts mayas impressionnants, dont des masques de jade de Calakmul, tout en profitant d'une vue spectaculaire sur la mer.",
+        "🌊 <strong>Détente à Playa Bonita</strong>: L'après-midi, dirigez-vous vers Playa Bonita, une plage aménagée à quelques kilomètres au sud de la ville, idéale pour se baigner et se détendre au soleil."
+      ],
+      "illustration": "campeche_jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🚌",
+          "titre": "Accès à la plage",
+          "texte": "Des collectivos ou taxis peuvent vous emmener à Playa Bonita depuis le centre-ville en environ 15-20 minutes."
+        },
+        {
+          "symbole": "🏊",
+          "titre": "Commodités",
+          "texte": "Playa Bonita dispose de douches, de vestiaires et de petits restaurants pour déjeuner sur place."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🛶",
+      "titre": "Aventure dans les Mangroves de la Laguna de Términos",
+      "legende": "Cette journée est une invitation à l'évasion au cœur de la nature luxuriante de Campeche.\nLa Laguna de Términos, une immense lagune côtière, est un écosystème d'une richesse incroyable, abritant une faune et une flore exceptionnelles.\nUne excursion en bateau à travers les mangroves permet d'observer des oiseaux exotiques, des dauphins et peut-être même des crocodiles, dans leur habitat naturel.\nC'est une expérience immersive et apaisante, loin de l'agitation, qui révèle la beauté sauvage de la région.",
+      "lieu": "Laguna de Términos",
+      "activites": [
+        "🚤 <strong>Tour en bateau dans la Laguna de Términos</strong>: Partez pour une excursion matinale en bateau depuis un port proche (comme Isla Aguada) pour explorer les mangroves de la Laguna de Términos, une zone protégée riche en biodiversité. Observez des oiseaux aquatiques, des dauphins et la végétation dense.",
+        "🦅 <strong>Observation de la faune et de la flore</strong>: Votre guide vous aidera à repérer les espèces locales, notamment des flamants roses, des pélicans et diverses espèces de poissons, dans cet écosystème unique."
+      ],
+      "illustration": "campeche_jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Organisation",
+          "texte": "Réservez votre tour en bateau à l'avance, soit via votre hôtel, soit directement auprès d'un opérateur local."
+        },
+        {
+          "symbole": "🦟",
+          "titre": "Protection",
+          "texte": "Prévoyez un répulsif anti-moustiques, surtout en saison des pluies, et des jumelles pour l'observation des oiseaux."
+        },
+        {
+          "symbole": "🚗",
+          "titre": "Transport",
+          "texte": "Isla Aguada est à environ 1h30 de route de Campeche. Un taxi ou un bus peut vous y emmener."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🌶️",
+      "titre": "Saveurs Locales et Immersion Culinaire",
+      "legende": "La gastronomie de Campeche est un pilier de son identité, mélangeant influences mayas et espagnoles.\nCette journée est une exploration des saveurs, des arômes et des traditions culinaires de la région.\nLa visite d'un marché local est une explosion de couleurs et d'odeurs, offrant un aperçu authentique de la vie quotidienne.\nParticiper à un cours de cuisine ou simplement déguster des plats typiques permet de comprendre l'âme de Campeche à travers son assiette.\nC'est une journée riche en découvertes gustatives et en échanges culturels.",
+      "lieu": "Campeche",
+      "activites": [
+        "🛍️ <strong>Visite du Mercado Principal de Campeche</strong>: Plongez dans l'effervescence du marché central, où vous trouverez des fruits exotiques, des épices, des fruits de mer frais et des produits artisanaux. C'est une excellente occasion de goûter des spécialités locales.",
+        "👨‍🍳 <strong>Cours de cuisine Yucatèque ou dégustation</strong>: Participez à un cours de cuisine pour apprendre à préparer des plats emblématiques comme le cochinita pibil ou les panuchos, ou optez pour une dégustation guidée des meilleures saveurs de la ville dans des restaurants authentiques."
+      ],
+      "illustration": "campeche_jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Marchandage",
+          "texte": "Au marché, le marchandage est moins courant qu'ailleurs au Mexique, mais les prix sont généralement très abordables."
+        },
+        {
+          "symbole": "🌶️",
+          "titre": "Attention aux épices",
+          "texte": "La cuisine mexicaine peut être relevée. N'hésitez pas à demander 'sin chile' si vous n'aimez pas les plats trop épicés."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": " Hacienda et Vie de Pêcheur",
+      "titre": "Découverte des Haciendas et de la Vie Côtière Authentique",
+      "legende": "Cette journée offre un contraste saisissant entre le passé opulent des haciendas et la simplicité de la vie des pêcheurs.\nLa visite d'une hacienda permet de remonter le temps, d'imaginer l'époque du henequén et de l'indigo, et d'admirer l'architecture coloniale restaurée.\nEnsuite, un détour par un petit village de pêcheurs offre une immersion dans le quotidien de la côte, loin des circuits touristiques classiques.\nC'est une occasion unique de rencontrer les habitants et de savourer des fruits de mer ultra-frais, directement pêchés du jour.\nUne journée entre histoire, tradition et authenticité.",
+      "lieu": "Alrededores de Campeche",
+      "activites": [
+        "🏡 <strong>Visite d'une Hacienda historique</strong>: Explorez une des haciendas restaurées des environs de Campeche, comme l'Hacienda Uayamon (si l'accès est possible ou juste pour admirer l'extérieur), pour découvrir l'histoire de ces anciennes plantations et leur architecture majestueuse.",
+        "🎣 <strong>Immersion dans un village de pêcheurs</strong>: Rendez-vous dans un petit village côtier comme Lerma, tout près de Campeche, pour observer les pêcheurs décharger leurs prises, flâner sur le port et déguster des fruits de mer frais dans un restaurant local typique."
+      ],
+      "illustration": "campeche_jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Transport",
+          "texte": "La location de voiture est recommandée pour cette journée afin d'explorer à votre rythme, ou vous pouvez organiser un taxi pour la journée."
+        },
+        {
+          "symbole": "🦐",
+          "titre": "Spécialité",
+          "texte": "À Lerma, ne manquez pas de goûter les 'camarones al coco' (crevettes à la noix de coco), une spécialité locale."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🛍️",
+      "titre": "Journée Libre, Shopping et Douceurs de Campeche",
+      "legende": "La dernière journée complète à Campeche est placée sous le signe de la liberté et de la détente.\nC'est le moment idéal pour revisiter un lieu coup de cœur, faire quelques emplettes de souvenirs artisanaux ou simplement se laisser porter par l'ambiance de la ville.\nProfitez-en pour savourer une dernière fois la cuisine locale, vous prélasser dans un café ou vous offrir un moment de repos bien mérité.\nCette journée permet de clore le voyage en douceur, en emportant avec soi les couleurs et les saveurs de Campeche.",
+      "lieu": "Campeche",
+      "activites": [
+        "🎁 <strong>Shopping de souvenirs et artisanat local</strong>: Flânez dans les boutiques du centre historique pour trouver des guayaberas (chemises traditionnelles), des bijoux en corail noir, des hamacs ou des objets en bois sculpté, parfaits souvenirs de votre voyage.",
+        "☕ <strong>Détente dans un café ou revisite d'un lieu favori</strong>: Profitez d'un café en terrasse pour observer la vie locale, ou retournez visiter un musée ou un baluarte qui vous a particulièrement plu, à votre rythme."
+      ],
+      "illustration": "campeche_jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Idée cadeau",
+          "texte": "Le 'sombrero de jipijapa', un chapeau de paille fine, est un artisanat emblématique de la région de Campeche."
+        },
+        {
+          "symbole": "🍦",
+          "titre": "Gourmandise",
+          "texte": "Goûtez aux glaces artisanales locales, souvent à base de fruits exotiques, pour une pause rafraîchissante."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🛫",
+      "titre": "Départ de Campeche",
+      "legende": "C'est le jour du départ, mais avant de quitter Campeche, prenez le temps d'un dernier petit-déjeuner typique.\nProfitez des dernières heures pour une ultime balade dans le centre historique, imprégnant une dernière fois l'atmosphère unique de la ville.\nLes souvenirs des couleurs vives, des saveurs intenses et de l'histoire maya et coloniale resteront gravés.\nLe transfert vers l'aéroport marque la fin d'une aventure mémorable dans cette perle du Golfe du Mexique.",
+      "lieu": "Campeche",
+      "activites": [
+        "🍳 <strong>Dernier petit-déjeuner local</strong>: Savourez un dernier 'huevos motuleños' ou 'chilaquiles' dans un restaurant local avant de partir.",
+        "✈️ <strong>Transfert vers l'aéroport de Campeche (CPE)</strong>: Organisez votre transfert en fonction de l'heure de votre vol pour entamer le voyage de retour."
+      ],
+      "illustration": "campeche_jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Prévoyez d'arriver à l'aéroport au moins 2 heures avant votre vol domestique."
+        },
+        {
+          "symbole": "👋",
+          "titre": "Hasta luego!",
+          "texte": "Campeche vous attendra pour une prochaine aventure !"
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1000€/pers (vol A/R Paris-Campeche avec escale)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "150€/pers (taxis, collectivos, excursions locales et inter-villes)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "450€/pers (environ 50€/jour pour 9 jours, restaurants locaux et marchés)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "765€/pers (environ 85€/nuit pour 9 nuits, hôtel boutique ou charmant)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "100€/pers (entrées sites archéologiques, musées, tour en bateau)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de novembre à mai, durant la saison sèche.",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La monnaie locale est le Peso Mexicain (MXN). Les cartes de crédit sont acceptées dans la plupart des commerces, mais prévoyez du liquide pour les petits achats et marchés.",
+      "symbole": "💳"
+    },
+    {
+      "titre": "La langue officielle est l'espagnol. Apprendre quelques mots de base sera très apprécié par les habitants.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "Les prises électriques sont de type A et B (deux ou trois fiches plates). Un adaptateur est nécessaire pour les appareils européens.",
+      "symbole": "🔌"
+    },
+    {
+      "titre": "Il est fortement recommandé de ne pas boire l'eau du robinet. Privilégiez l'eau en bouteille pour boire et vous brosser les dents.",
+      "symbole": "💧"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations touristiques officielles sur Campeche",
+      "titre": "Visit Campeche",
+      "url": "https://visitcampeche.mx/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météorologiques pour Campeche",
+      "titre": "Meteo Campeche",
+      "url": "https://www.accuweather.com/fr/mx/campeche/241851/weather-forecast/241851",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Informations sur le patrimoine mondial de l'UNESCO à Campeche",
+      "titre": "UNESCO Campeche",
+      "url": "https://whc.unesco.org/fr/list/868",
+      "symbole": "🏛️"
+    }
+  ]
+}
